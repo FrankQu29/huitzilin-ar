@@ -7,7 +7,7 @@
   <style>
     body {
       margin: 0;
-      background-color: #000;
+      background-color: #bc3232;
     }
 
     model-viewer {
@@ -34,7 +34,7 @@
 <body>
   <model-viewer
     id="modelo"
-    src="Huitzilin_360.glb"
+    src="definit.glb"
     ar
     ar-modes="scene-viewer webxr quick-look"
     auto-rotate
@@ -52,7 +52,7 @@
   
     arButton.addEventListener('click', () => {
       // Rotar el modelo 90° en el eje Y antes de activar AR
-      modelViewer.setAttribute('rotation', '0deg 90deg 0deg');
+      modelViewer.setAttribute('rotation', '0deg 0deg 0deg');
   
       if (modelViewer.canActivateAR) {
         modelViewer.activateAR();
