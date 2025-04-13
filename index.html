@@ -49,8 +49,11 @@
   <script>
     const modelViewer = document.getElementById('modelo');
     const arButton = document.getElementById('custom-ar-button');
-
+  
     arButton.addEventListener('click', () => {
+      // Rotar el modelo 90° en el eje Y antes de activar AR
+      modelViewer.setAttribute('rotation', '0deg 90deg 0deg');
+  
       if (modelViewer.canActivateAR) {
         modelViewer.activateAR();
       } else {
@@ -58,5 +61,6 @@
       }
     });
   </script>
+  
 </body>
 </html>
