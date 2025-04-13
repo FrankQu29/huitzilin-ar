@@ -1,44 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Modelo AR - Huitzilin</title>
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <style>
-      body {
-        margin: 0;
-        background-color: #000;
+<head>
+  <meta charset="UTF-8" />
+  <title>Modelo AR - Huitzilin</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+    }
+
+    model-viewer {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    #custom-ar-button {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #ffcc00;
+      color: #000;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 12px;
+      cursor: pointer;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <model-viewer
+    id="modelo"
+    src="Huitzilin_360.glb"
+    ar
+    ar-modes="scene-viewer webxr quick-look"
+    auto-rotate
+    camera-controls
+    environment-image="neutral"
+    shadow-intensity="1"
+    ar-scale="auto">
+  </model-viewer>
+
+  <button id="custom-ar-button">Ver en tu espacio</button>
+
+  <script>
+    const modelViewer = document.getElementById('modelo');
+    const arButton = document.getElementById('custom-ar-button');
+
+    arButton.addEventListener('click', () => {
+      if (modelViewer.canActivateAR) {
+        modelViewer.activateAR();
+      } else {
+        alert("AR no está disponible en este dispositivo o navegador.");
       }
-      model-viewer {
-        width: 100vw;
-        height: 100vh;
-      }
-      button[slot="ar-button"] {
-        position: absolute;
-        bottom: 24px;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: #ffcc00;
-        color: #000;
-        border: none;
-        padding: 12px 24px;
-        font-size: 16px;
-        border-radius: 12px;
-        cursor: pointer;
-      }
-    </style>
-  </head>
-  <body>
-    <model-viewer
-      src="Huitzilin_360.glb"
-      ar
-      ar-modes="scene-viewer webxr quick-look"
-      auto-rotate
-      camera-controls
-      environment-image="neutral"
-      shadow-intensity="1"
-      ar-scale="auto">
-      <button slot="ar-button">Ver en tu espacio</button>
-    </model-viewer>
-  </body>
+    });
+  </script>
+</body>
 </html>
