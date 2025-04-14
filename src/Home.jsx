@@ -1,6 +1,10 @@
-import React, { useEffect } from 'react';
-
+import React, { use, useEffect, useState } from 'react';
+import './Home.css';
 const ARViewer = () => {
+
+  const [material, setMaterial] = useState("definit.glb");
+  const [labelMaterial, setLabelMaterial] = useState("Fibra de Carbono");
+  const [counter, setCounter] = useState(0);
   useEffect(() => {
     const script = document.createElement('script');
     script.type = 'module';
@@ -16,12 +20,27 @@ const ARViewer = () => {
       alert('AR no está disponible en este dispositivo o navegador.');
     }
   };
+  const handleChangeMaterial = () => {
+    setCounter(counter + 1)
+    if(counter%2 ===0){
+        setMaterial("/Huitzillin_fibra.glb");
+        setLabelMaterial("Modelo CAD")
+        
+    }
+    else {
+        setMaterial("definit.glb");
+        setLabelMaterial("Fibra de Carbono")
+    }
+    console.log(counter);
+  }
 
   return (
-    <div style={styles.container}>
+    <>
+    <button className="ar-button-secondary" onClick={handleChangeMaterial}>{labelMaterial}</button>
+    <div className="ar-container">
       <model-viewer
         id="modelo"
-        src="/Huitzillin_fibra.glb"
+        src={material}
         ar
         ar-modes="scene-viewer webxr quick-look"
         auto-rotate
@@ -29,48 +48,17 @@ const ARViewer = () => {
         environment-image="neutral"
         shadow-intensity="1"
         ar-scale="auto"
-        style={styles.modelViewer}
+        exposure="1.2"
+        camera-orbit="150deg 60deg auto"
+        class="model-viewer"
       ></model-viewer>
 
-      <button onClick={handleAR} style={styles.button}>
+      <button onClick={handleAR} className="ar-button-primary">
         Conóce Huitzillin en AR
       </button>
     </div>
+    </>
   );
-};
-
-const styles = {
-  container: {
-    width: '100vw',
-    height: '100vh',
-    margin: 0,
-    padding: 0,
-    background: 'linear-gradient(to right, #e6f2e6, #2e602e)', // Tu paleta verde institucional
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'column',
-  },
-  modelViewer: {
-    width: '100%',
-    height: '100%',
-    transform: 'scale(1)', // Ajuste de escala solo en web (NO en AR)
-    transformOrigin: 'center',
-  },
-  button: {
-    position: 'absolute',
-    bottom: '24px',
-    left: '50%',
-    transform: 'translateX(-50%)',
-    backgroundColor: '#8391A0', // Gris de tu paleta
-    color: '#fff',
-    border: 'none',
-    padding: '12px 24px',
-    fontSize: '16px',
-    borderRadius: '12px',
-    cursor: 'pointer',
-    boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
-  },
 };
 
 export default ARViewer;
