@@ -36,7 +36,6 @@ const ARViewer = () => {
 
   return (
     <>
-    <button className="ar-button-secondary" onClick={handleChangeMaterial}>{labelMaterial}</button>
     <div className="ar-container">
       <model-viewer
         id="modelo"
@@ -56,6 +55,7 @@ const ARViewer = () => {
       <button onClick={handleAR} className="ar-button-primary">
         Conóce Huitzillin en AR
       </button>
+      <button className="ar-button-secondary" onClick={handleChangeMaterial}>{labelMaterial}</button>
     </div>
     </>
   );

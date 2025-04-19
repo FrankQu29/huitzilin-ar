@@ -1,0 +1,63 @@
+.header-vision,
+.header-mision{
+    font-family: "Oswald", sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover; /* o contain, según lo que necesites */
+    background-position: center;
+    background-color: black;
+    background-image: url("../assets/grad_azul.svg");
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.header-mision img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.header-vision img{
+    margin-left: 5rem;
+}
+
+.header-vision{
+    background-image: url("../assets/grad_azul_inv.svg");
+}
+.header-vision .info-mision{
+    max-width: 550px;
+}
+.info-mision{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    width: 50%;
+    margin-left: 10rem;
+  
+}
+
+.info-mision h3{
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+
+
+
+.info-mision p{
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 500;
+}

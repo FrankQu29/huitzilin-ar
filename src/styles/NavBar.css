@@ -1,0 +1,60 @@
+nav{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2000;
+    width: 100vw;
+    
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 4rem;
+    width: 40%;
+    margin: 0;
+    height: 4rem;
+    align-items: center;
+}
+
+nav ul:first-child{
+    border: 2px solid red;
+    justify-content: center;
+    background-color: #B71111;
+
+}
+
+nav ul:last-child{
+    border: 2px solid white;
+    justify-content: center;
+}
+nav ul li{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}   
+
+nav ul a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border: none;
+}
+
+nav ul a:hover{
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
+
+
+nav ul a img{
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    width: 4rem;
+    margin-right: 0.5rem;
+}
