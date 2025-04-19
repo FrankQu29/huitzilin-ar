@@ -115,10 +115,10 @@
 .specs-huitzillin img{
     position: absolute;
     top: 300px;
-    right: 50px;
-    width: 800px;
-    height: 300px;
-    margin-right: 2rem;
+    right: 0px;
+    width: 1000px;
+    height: 400px;
+    margin-right: 0rem;
 }
 
 .specs-huitzillin div{

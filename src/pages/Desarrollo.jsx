@@ -6,8 +6,7 @@ import Logo from "../assets/huitzillin_logo 1.svg";
 import Plano from "../assets/plane.png";
 import Footer from "../components/Footer";
 import React from 'react';
-import Plano1 from "../assets/plano_1.png";
-import Plano2 from "../assets/plano_2.png";
+import Top from "../assets/top.png";
 const Desarrollo = () => {
   const handleDragStart = (e) => e.preventDefault();
      const [material, setMaterial] = useState("definit.glb");
@@ -114,7 +113,7 @@ const Desarrollo = () => {
                 
 
             </div>
-            <img src={Plano} alt="" />
+            <img src={Top} alt="" />
                 </section>
                
             </main>
