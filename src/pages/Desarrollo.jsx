@@ -9,7 +9,7 @@ import React from 'react';
 import Top from "../assets/top.png";
 const Desarrollo = () => {
   const handleDragStart = (e) => e.preventDefault();
-     const [material, setMaterial] = useState("definit.glb");
+     const [material, setMaterial] = useState("/definit.glb");
       const [labelMaterial, setLabelMaterial] = useState("Fibra de Carbono");
       const [counter, setCounter] = useState(0);
       useEffect(() => {
@@ -35,7 +35,7 @@ const Desarrollo = () => {
             
         }
         else {
-            setMaterial("definit.glb");
+            setMaterial("/definit.glb");
             setLabelMaterial("Fibra de Carbono")
         }
         console.log(counter);

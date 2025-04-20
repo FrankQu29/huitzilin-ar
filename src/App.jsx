@@ -4,7 +4,6 @@ import {
 } from 'react-router-dom';
 
 import './App.css';
-import ARViewer from './Home'; 
 import Home from './pages/Home';
 import Desarrollo from './pages/Desarrollo';
 import Mision from './pages/Mision';

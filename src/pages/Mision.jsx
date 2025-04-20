@@ -22,7 +22,7 @@ const Mision = () => {
         </header>
             <main>
                 <section className="header-vision">
-                <img src={AvionPlano} alt="" />h
+                <img src={AvionPlano} alt="" />
 
                 <div className="info-mision">
                 <h3>VISIÓN</h3>

@@ -1,8 +1,8 @@
 
   
 header img{
-    width: 105vw;
-    transform: rotate(-15deg);}
+    width: 100vw;
+    transform: rotate(-8deg);}
 
 .nosotros-section,
 .why-huitzillin,
@@ -66,5 +66,5 @@ header{
 
 .nosotros-section{
   position: relative;
-  background-image: url("../assets/nosotros_section.png");
+  background-image: url("../assets/chucho.png");
 }

@@ -18,3 +18,8 @@ const NavBar = () => {
     );
 }
 export default NavBar;
+
+function smoothScroll(event, targetId) {
+    event.preventDefault();
+    document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+  }

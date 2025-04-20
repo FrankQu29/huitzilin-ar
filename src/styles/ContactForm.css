@@ -1,7 +1,7 @@
 .contact-section {
     background-color: #070707;
     color: #ededed;
-    padding: 4rem 1.5rem;
+    padding: 4rem 0;
   }
   
   .contact-container {
@@ -58,6 +58,7 @@
   
   .form-button {
     text-align: center;
+    margin-left: 2rem;
   }
   
   .form-button button {

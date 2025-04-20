@@ -3,6 +3,7 @@ import NavBar from "../components/NavBar";
 import NegroHuit from "../assets/definitivomain.svg"
 import Logo from "../assets/huitzillin_logo 1.svg";
 import Footer from "../components/Footer";
+
 const Home = () => {
 
     return (

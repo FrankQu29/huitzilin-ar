@@ -10,6 +10,7 @@ import Estructuras from "../assets/estructuras.png";
 import Mecatronica from "../assets/mecatronica.png";
 import Propulsivos from "../assets/propulsivos.png";
 import Administracion from "../assets/administracion.png";
+import Chucho from "../assets/chucho.png";
 const Nosotros = () => {
 
     return (
@@ -17,19 +18,27 @@ const Nosotros = () => {
         <NavBar></NavBar>
 
             <header className="header-nosotros">
-            <h3>¿Quénes somos? </h3>
+            <h3>¿Quiénes somos? </h3>
             <div className="info-nosotros">
                 <p>Somos un equipo multidisciplinario de estudiantes del Instituto Politécnico Nacional, apasionados por la innovación y comprometidos con el avance de la tecnología aeroespacial en México. Nuestro enfoque se centra en el diseño, desarrollo y construcción de una aeronave VTOL (despegue y aterrizaje vertical) de alto rendimiento, concebida como una plataforma tecnológica avanzada.
-                <br /><br />
-                Este proyecto no solo representa un reto técnico, sino también una oportunidad de crecimiento personal y profesional. Nos impulsa la curiosidad, el deseo de aprender y la convicción de que la ingeniería puede transformar nuestro entorno. Trabajamos unidos por una visión común: demostrar que, con esfuerzo, creatividad y colaboración, los estudiantes también podemos dejar huella en el desarrollo tecnológico de nuestro país.
                 </p>
                 <img src={NosotrosImg} alt="" />
 
             </div>
             </header>
-            <main className="areas-nosotros">
-                <section >
-                    <h3>Nuestras áreas de orgranización</h3>
+            <main >
+            <section className="areas-nosotros">
+            <div className="info-nosotros">
+            <img src={Chucho} alt="" />
+
+                <p>
+                Este proyecto no solo representa un reto técnico, sino también una oportunidad de crecimiento personal y profesional. Nos impulsa la curiosidad, el deseo de aprender y la convicción de que la ingeniería puede transformar nuestro entorno. Trabajamos unidos por una visión común: demostrar que, con esfuerzo, creatividad y colaboración, los estudiantes también podemos dejar huella en el desarrollo tecnológico de nuestro país.
+                </p>
+
+            </div>
+            </section>
+                <section className="areas-nosotros" >
+                    <h3>Nuestras Áreas de Desarrollo</h3>
                     <div className="areas">
                     <div className="card">
                         <img src={Aero} alt="" />
