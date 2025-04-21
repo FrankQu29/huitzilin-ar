@@ -5,6 +5,7 @@ import Logo from "../assets/huitzillin_logo 1.svg";
 import AvionBlanco from "../assets/avion_blanco.svg"
 import AvionPlano from "../assets/avion_plano.svg"
 import Footer from "../components/Footer";
+
 const Mision = () => {
 
     return (
