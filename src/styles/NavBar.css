@@ -1,59 +1,162 @@
-nav{
-    position: absolute;
+/* === ESTILOS MOBILE FIRST === */
+
+/* Estilos base (móvil) */
+nav {
+    position: fixed;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: #B71111;
     z-index: 2000;
-    width: 100%;
-    
+    top: 0;
+    right: -100%;
+    transition: right 0.3s ease;
+    overflow-y: auto;
 }
-nav ul{
+
+nav.open {
+    right: 0;
+}
+
+nav ul {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     list-style: none;
-    gap: 4rem;
-    width: auto;
-    margin: 0;
-    height: 4rem;
+    gap: 2rem;
+    width: 100%;
+    padding: 0;
+    margin: 2rem 0;
     align-items: center;
 }
 
-nav ul:first-child{
-    border: 2px solid red;
-    justify-content: center;
+nav ul:first-child {
+    border-bottom: 2px solid white;
     background-color: #B71111;
-
+    padding-bottom: 1rem;
 }
 
-nav ul:last-child{
-    border: 2px solid white;
-    justify-content: center;
+nav ul:last-child {
+    border-top: 2px solid white;
+    padding-top: 1rem;
 }
-nav ul li{
+
+nav ul li {
     padding: 0.5rem;
     border-radius: 0.5rem;
     transition: all 0.3s ease;
+    width: 100%;
+    text-align: center;
 }   
 
-nav ul a{
+nav ul a {
     text-decoration: none;
     color: white;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 600;
     border: none;
+    display: block;
+    padding: 0.5rem 0;
 }
 
-nav ul a:hover{
+nav ul a:hover {
     color: white;
     background-color: transparent;
     cursor: pointer;
-
 }
 
+nav ul a img {
+    width: 3rem;
+    margin: 0 auto;
+    display: block;
+}
 
-nav ul a img{
-    position: absolute;
-    top: 0.5rem;
-    left: 1rem;
-    width: 4rem;
-    margin-right: 0.5rem;
+/* Botón hamburguesa (visible en móvil) */
+.menu-btn {
+    display: block;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: #B71111;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    z-index: 3000;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Overlay cuando el menú está abierto */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1999;
+}
+
+/* === ESTILOS PARA ESCRITORIO === */
+@media (min-width: 769px) {
+    /* Ocultar botón hamburguesa en escritorio */
+    .menu-btn {
+        display: none;
+    }
+    
+    /* Resetear estilos del nav para escritorio */
+    nav {
+        position: absolute;
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+        right: 0;
+        background-color: transparent;
+    }
+    
+    nav ul {
+        flex-direction: row;
+        height: 4rem;
+        gap: 4rem;
+        width: auto;
+        margin: 0;
+    }
+    
+    nav ul:first-child {
+        border: 2px solid red;
+        justify-content: center;
+        background-color: #B71111;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+    
+    nav ul:last-child {
+        border: 2px solid white;
+        justify-content: center;
+        border-top: none;
+        padding-top: 0;
+    }
+    
+    nav ul li {
+        width: auto;
+        text-align: left;
+    }
+    
+    nav ul a {
+        font-size: 1.4rem;
+    }
+    
+    nav ul a img {
+        position: absolute;
+        top: 0.5rem;
+        left: 1rem;
+        width: 4rem;
+        margin-right: 0.5rem;
+    }
 }
