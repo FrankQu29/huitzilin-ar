@@ -9,7 +9,7 @@ nav {
     max-width: 300px;
     height: 100vh;
     background-color: #B71111;
-    z-index: 2000000;
+    z-index: 20000001;
     top: 0;
     right: -100%;
     transition: right 0.3s ease;
@@ -87,7 +87,7 @@ nav ul a img {
     font-size: 1.5rem;
     max-width: 40px;
     height: 40px;
-    z-index: 3000;
+    z-index: 3000100;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -138,7 +138,7 @@ nav ul a img {
     height: 100vh;
     background-color: #b7111170;
     backdrop-filter: blur(10px);
-    z-index: 9999;
+    z-index: 300002;
     padding: 2rem 1rem;
     transition: all 0.3s ease-in-out;
   }
@@ -157,7 +157,7 @@ nav ul a img {
     position: fixed;
     top: 1rem;
     right: 1rem;
-    z-index: 10000;
+    z-index: 10000000;
     font-size: 2rem;
     background: none;
     border: none;
