@@ -65,7 +65,7 @@
 }
 
 .areas-nosotros img{
-  max-width: 300px;
+  max-width: 600px;
 }
 .info-nosotros{
     display: flex;
@@ -91,7 +91,7 @@
 
 .info-nosotros img{
     transform: rotate(0deg);
-    width: 100px;
+    width: 700px;
     height: auto;
 }
 
