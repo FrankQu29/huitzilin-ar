@@ -230,4 +230,13 @@
     max-width: 800px;
 }
 
+.ar-button-primary {
+    position: absolute;
+    z-index: 300001;
+    font-weight: 700;
+    top: 19rem;
+    left: 80px;
 }
+
+}
+
