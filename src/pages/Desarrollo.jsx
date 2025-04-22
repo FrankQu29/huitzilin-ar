@@ -71,13 +71,13 @@ const Desarrollo = () => {
       <model-viewer
         id="modelo"
         src={material}
-        //ar
-        //ar-modes="scene-viewer webxr quick-look"
+        ar
+        ar-modes="scene-viewer webxr quick-look"
         auto-rotate
         camera-controls
         environment-image="neutral"
         shadow-intensity="1"
-        //ar-scale="auto"
+        ar-scale="auto"
         exposure="1.2"
         camera-orbit="60deg 70deg auto"
         class="model-viewer"
