@@ -41,7 +41,14 @@ const Desarrollo = () => {
         }
         console.log(counter);
       }
-      
+      const [esMovil, setEsMovil] = useState(false);
+
+      useEffect(() => {
+        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        const esMovilDetectado = /android|iphone|ipad|ipod|windows phone/i.test(userAgent);
+        setEsMovil(esMovilDetectado);
+      }, []);
+    
 
     return (
         <>
@@ -55,7 +62,11 @@ const Desarrollo = () => {
               El Futuro de los No-Tipulados
             </p>
             <button className="ar-button-secondary" onClick={handleChangeMaterial}>{labelMaterial}</button>
-
+            {esMovil && (
+  <button onClick={handleAR} className="ar-button-primary">
+    Conoce Huitzillin en AR
+  </button>
+)}
             <div className="ar-container">
       <model-viewer
         id="modelo"
@@ -72,9 +83,8 @@ const Desarrollo = () => {
         class="model-viewer"
       ></model-viewer>
       
-      {/*<button onClick={handleAR} className="ar-button-primary">
-        Conóce Huitzillin en AR
-      </button>*/}
+     
+
     </div>
             
             </header>
