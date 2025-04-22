@@ -4,44 +4,61 @@ import Logo from "../assets/huitzillin_logo 1.svg";
 
 const NavBar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [animClass, setAnimClass] = useState("");
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
-    // Efecto para aplicar los estilos directamente
-    {/*useEffect(() => {
-        const navElement = document.querySelector('nav');
-        if (menuOpen) {
-            navElement.style.right = '0';
-        } else {
-            navElement.style.right = '-100%';
-        }
-    }, [menuOpen]);
-*/}
+    // Detecta si el tamaño de pantalla cambia (mobile/desktop)
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 768);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
+        if (menuOpen) {
+            setAnimClass("navbar-hide");
+            setTimeout(() => {
+                setMenuOpen(false);
+                setAnimClass("");
+            }, 300);
+        } else {
+            setMenuOpen(true);
+            setAnimClass("navbar-show");
+        }
+    };
+
+    const closeMenuSmooth = (e, id) => {
+        e.preventDefault();
+        smoothScroll(e, id);
+        if (isMobile) toggleMenu();
     };
 
     return (
         <>
-            <button className="menu-btn" onClick={toggleMenu} aria-label="Toggle menu">
-                {menuOpen ? "✕" : "☰"}
-            </button>
+            {isMobile && (
+                <button className="menu-btn" onClick={toggleMenu} aria-label="Toggle menu">
+                    {menuOpen ? "✕" : "☰"}
+                </button>
+            )}
 
-            <nav className={menuOpen ? "open" : ""}>
-                <ul className="navbar-list">
-                    <li className="navbar-item"><a href="/"><img src={Logo} alt="" /></a></li>
-                    <li className="navbar-item"><a href="/huitzillin">HUITZILLIN V1</a></li>
-                    <li className="navbar-item"><a href="/mision-vision">MISIÓN Y VISIÓN</a></li>
-                </ul>
-                <ul>
-                    <li className="navbar-item"><a href="/identidad">IDENTIDAD</a></li>
-                    <li className="navbar-item"><a href="/nosotros">NOSOTROS</a></li>
-                    <li className="navbar-item"><a href="#contacto" onClick={(e) => {
-                        if (menuOpen) setMenuOpen(false);
-                        smoothScroll(e, 'contacto');
-                    }}>CONTACTO</a></li>
-                </ul>
-            </nav>
+            {(menuOpen || !isMobile) && (
+                <nav className={`navbar ${isMobile ? `navbar-animated ${animClass}` : ""}`}>
+                    <ul className="navbar-list">
+                        <li className="navbar-item"><a href="/"><img src={Logo} alt="" /></a></li>
+                        <li className="navbar-item"><a href="/huitzillin">HUITZILLIN V1</a></li>
+                        <li className="navbar-item"><a href="/mision-vision">MISIÓN Y VISIÓN</a></li>
+                    </ul>
+                    <ul>
+                        <li className="navbar-item"><a href="/identidad">IDENTIDAD</a></li>
+                        <li className="navbar-item"><a href="/nosotros">NOSOTROS</a></li>
+                        <li className="navbar-item">
+                            <a href="#contacto" onClick={(e) => closeMenuSmooth(e, 'contacto')}>CONTACTO</a>
+                        </li>
+                    </ul>
+                </nav>
+            )}
 
-            {menuOpen && <div className="overlay" onClick={toggleMenu}></div>}
+            {menuOpen && isMobile && <div className="overlay" onClick={toggleMenu}></div>}
         </>
     );
 };
@@ -49,6 +66,5 @@ const NavBar = () => {
 export default NavBar;
 
 function smoothScroll(event, targetId) {
-    event.preventDefault();
-    document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+    document.getElementById(targetId)?.scrollIntoView({ behavior: 'smooth' });
 }
