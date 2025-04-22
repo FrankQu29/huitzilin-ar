@@ -5,6 +5,7 @@ import Logo from "../assets/huitzillin_logo 1.svg";
 import AvionBlanco from "../assets/avion_blanco.svg"
 import AvionPlano from "../assets/avion_plano.svg"
 import Footer from "../components/Footer";
+import Imagen from "../assets/imagen.png";
 
 const Mision = () => {
 
@@ -23,7 +24,7 @@ const Mision = () => {
         </header>
             <main>
                 <section className="header-vision">
-                <img src={AvionPlano} alt="" />
+                <img src={Imagen} alt="" />
 
                 <div className="info-mision">
                 <h3>VISIÓN</h3>

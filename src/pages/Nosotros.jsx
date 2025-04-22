@@ -29,11 +29,11 @@ const Nosotros = () => {
             <main >
             <section className="areas-nosotros">
             <div className="info-nosotros">
-            <img src={Chucho} alt="" />
 
                 <p>
                 Este proyecto no solo representa un reto técnico, sino también una oportunidad de crecimiento personal y profesional. Nos impulsa la curiosidad, el deseo de aprender y la convicción de que la ingeniería puede transformar nuestro entorno. Trabajamos unidos por una visión común: demostrar que, con esfuerzo, creatividad y colaboración, los estudiantes también podemos dejar huella en el desarrollo tecnológico de nuestro país.
                 </p>
+                <img src={Chucho} alt="" />
 
             </div>
             </section>

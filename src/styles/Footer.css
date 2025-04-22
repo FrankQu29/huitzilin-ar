@@ -8,7 +8,6 @@ footer{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 20px;
 }
 
 .footer-links a,
@@ -56,4 +55,10 @@ footer p img{
     width: 20px;
     height: 20px;
 
+}
+
+@media (max-width: 769px) {
+    .social-media a{
+        font-size: 15px;
+    }
 }

@@ -6,7 +6,7 @@ const NavBar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     // Efecto para aplicar los estilos directamente
-    useEffect(() => {
+    {/*useEffect(() => {
         const navElement = document.querySelector('nav');
         if (menuOpen) {
             navElement.style.right = '0';
@@ -14,18 +14,18 @@ const NavBar = () => {
             navElement.style.right = '-100%';
         }
     }, [menuOpen]);
-
+*/}
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
 
     return (
         <>
-            <button className="menu-btn" onClick={toggleMenu}>
+            <button className="menu-btn" onClick={toggleMenu} aria-label="Toggle menu">
                 {menuOpen ? "✕" : "☰"}
             </button>
 
-            <nav>
+            <nav className={menuOpen ? "open" : ""}>
                 <ul className="navbar-list">
                     <li className="navbar-item"><a href="/"><img src={Logo} alt="" /></a></li>
                     <li className="navbar-item"><a href="/huitzillin">HUITZILLIN V1</a></li>

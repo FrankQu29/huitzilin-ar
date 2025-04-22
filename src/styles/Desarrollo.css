@@ -1,8 +1,101 @@
+
+
+    .specs-huitzillin,
+.header-desarrollo{
+    font-family: "Oswald", sans-serif;
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: left !important;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover; /* o contain, según lo que necesites */
+    background-position: center;
+    background-color: black;
+    background-image: url("../assets/bg_rojo.svg");
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    padding: 0;
+    gap: 0rem;
+}
+
+.header-desarrollo h3{
+    margin-top: 5rem;
+    margin-bottom: 0;
+    font-size: 2.5rem;
+}
+.header-desarrollo p{
+    font-size: 1.5rem;
+    margin: 0;
+}
+.ar-container {
+    z-index: 300000;
+    margin-top: 0rem;
+    width: 100%;
+    height: 100%; /* o el alto que necesites */
+    top: 500px;
+    left: 10px ;
+  }
+      
+  .specs-huitzillin{
+    justify-content: center;
+    text-align: center;
+    padding-top: 3rem;
+  } 
+      
+.model-viewer {
+
+        width: 100%;
+        height: 100%;
+        transform: scale(1);
+        transform-origin: center;
+    
+    }
+.ar-button-secondary {
+    margin-top: 1rem;
+        font-weight: 700;
+        width: 200px;
+    }
+ .info-desarrollo{
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        width: 80%;
+      
+    }
+.info-desarrollo h4{
+    font-size: 10px;
+    margin-bottom: 0;
+}
+.info-desarrollo p{
+    font-size: 15px;
+    margin-top: 1rem;
+
+}
+.info-desarrollo h3{
+    margin: 0;
+}
+
+
+
+.table-specs{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 100%;
+    justify-content: space-between;
+    border-bottom: 2px solid white;
+}
+
+
+@media (min-width: 769px) {
 .specs-huitzillin,
 .header-desarrollo{
     font-family: "Oswald", sans-serif;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: left;
     width: 100vw;
@@ -16,21 +109,30 @@
     overflow-x: hidden;
     overflow-y: hidden;
     position: relative;
-    padding: 0 10%;
+    padding: 0;
 }
 
-.specs-huitzillin{
-    justify-content: left;
-    background-image: url("../assets/diamond_inv.svg");
+.header-desarrollo h3{
+    position: absolute;
+    left: 5%;
+    top: 7rem;
+    font-size: 1.5rem;
 }
+
+.header-desarrollo p{
+    position: absolute;
+    left: 5%;
+    top: 7rem;
+    font-size: 3.5rem;
+    text-align: left;
+}
+
 
 .ar-container {
-    z-index: 1;
+    z-index: 1000;
     position: absolute;
-    top: 100px;
-    right: 50px;
-    width: 80vw;
-    height: 80vh;
+    top: 40px;
+    left: 100px;
     margin: 0;
     padding: 0;
     display: flex;
@@ -44,6 +146,7 @@
 .model-viewer {
     width: 100%;
     height: 100%;
+    min-height: 1000px;
     transform: scale(1);
     transform-origin: center;
 
@@ -52,24 +155,29 @@
 .ar-button-primary {
     z-index: 10;
     font-weight: 700;
-    bottom: 0rem;
+    bottom: 10rem;
 }
   
 .ar-button-secondary {
-    z-index: 10;
+    z-index: 100000;
     position: absolute;
     font-weight: 700;
-    top: 540px;
-    right: 560px;
+    bottom: 420px;
+    left: 78px;
     width: 200px;
 }
-
+.specs-huitzillin{
+    padding: 0;
+    padding-top: 4rem;
+    justify-content: left !important;
+    background-image: url("../assets/diamond_inv.svg");
+}
 
 .info-desarrollo{
     display: flex;
     flex-direction: column;
     text-align: justify;
-    width: 45%;
+    width: 55%;
   
 }
 
@@ -93,7 +201,7 @@
 
 
 .info-desarrollo p{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: white;
     font-weight: 500;
 }
@@ -118,4 +226,6 @@
 
 .specs-huitzillin div{
     max-width: 800px;
+}
+
 }

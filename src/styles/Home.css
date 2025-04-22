@@ -52,10 +52,10 @@ header{
 
 .why-huitzillin img{
   position: absolute;
-  top: 10rem;
-  right: 0;
-  width: 80vw;
-  height: 80vh;
+  top: 3rem;
+  right: -5rem;
+  width: 90vw;
+  height: 90vh;
 }
 
 .mision-vision{
@@ -67,4 +67,23 @@ header{
 .nosotros-section{
   position: relative;
   background-image: url("../assets/corte.png");
+}
+
+.why-huitzillin h1{
+  font-size: 2rem;
+}
+
+/* === ESTILOS PARA ESCRITORIO === */
+@media (max-width: 480px) {
+  .info{
+    max-width: 300px;
+  }
+
+  .why-huitzillin img{
+    position: absolute;
+    top: 10rem;
+    left: 0rem;
+    height: 65%;
+    width: auto;
+  }
 }

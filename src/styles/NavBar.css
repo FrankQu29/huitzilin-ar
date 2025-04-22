@@ -9,15 +9,16 @@ nav {
     max-width: 300px;
     height: 100vh;
     background-color: #B71111;
-    z-index: 2000;
+    z-index: 2000000;
     top: 0;
     right: -100%;
     transition: right 0.3s ease;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 nav.open {
-    right: 0;
+    left: 0;
 }
 
 nav ul {
@@ -77,13 +78,14 @@ nav ul a img {
     display: block;
     position: fixed;
     top: 1rem;
-    right: 1rem;
+    left: auto;
+    margin-left: 1rem;
     background-color: #B71111;
     color: white;
     border: none;
     border-radius: 4px;
     font-size: 1.5rem;
-    width: 40px;
+    max-width: 40px;
     height: 40px;
     z-index: 3000;
     cursor: pointer;
@@ -91,6 +93,7 @@ nav ul a img {
     justify-content: center;
     align-items: center;
 }
+
 
 /* Overlay cuando el menú está abierto */
 .overlay {
@@ -102,6 +105,9 @@ nav ul a img {
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1999;
 }
+.open img{
+    width: 10rem;
+}
 
 /* === ESTILOS PARA ESCRITORIO === */
 @media (min-width: 769px) {
@@ -112,12 +118,15 @@ nav ul a img {
     
     /* Resetear estilos del nav para escritorio */
     nav {
+        display: flex;
         position: absolute;
         flex-direction: row;
-        width: 100%;
-        height: auto;
-        right: 0;
+        justify-content: space-between;
+        min-width: 100vw;
+        left: 0;
         background-color: transparent;
+        z-index: 2000;
+        height: auto;
     }
     
     nav ul {
@@ -126,6 +135,7 @@ nav ul a img {
         gap: 4rem;
         width: auto;
         margin: 0;
+        padding: 0 1rem;
     }
     
     nav ul:first-child {
@@ -157,6 +167,5 @@ nav ul a img {
         top: 0.5rem;
         left: 1rem;
         width: 4rem;
-        margin-right: 0.5rem;
     }
 }
