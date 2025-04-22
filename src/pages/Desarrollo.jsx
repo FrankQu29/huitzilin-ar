@@ -62,7 +62,7 @@ const Desarrollo = () => {
               El Futuro de los No-Tipulados
             </p>
             <button className="ar-button-secondary" onClick={handleChangeMaterial}>{labelMaterial}</button>
-            {esMovil && (
+            {!esMovil && (
   <button onClick={handleAR} className="ar-button-primary">
     Conoce Huitzillin en AR
   </button>
