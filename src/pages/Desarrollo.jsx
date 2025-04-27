@@ -10,9 +10,9 @@ import Top from "../assets/top.png";
 
 const Desarrollo = () => {
   const handleDragStart = (e) => e.preventDefault();
-     const [material, setMaterial] = useState("/definit.glb");
-      const [labelMaterial, setLabelMaterial] = useState("Fibra de Carbono");
-      const [counter, setCounter] = useState(0);
+     //const [material, setMaterial] = useState("/definit.glb");
+      //const [labelMaterial, setLabelMaterial] = useState("Fibra de Carbono");
+      //const [counter, setCounter] = useState(0);
       useEffect(() => {
         const script = document.createElement('script');
         script.type = 'module';
@@ -28,19 +28,19 @@ const Desarrollo = () => {
           alert('AR no está disponible en este dispositivo o navegador.');
         }
       };
-      const handleChangeMaterial = () => {
-        setCounter(counter + 1)
-        if(counter%2 ===0){
-            setMaterial("/Huitzillin_fibra.glb");
-            setLabelMaterial("Modelo CAD")
+      //const handleChangeMaterial = () => {
+        //setCounter(counter + 1)
+        //if(counter%2 ===0){
+            //setMaterial("/Huitzillin_fibra.glb");
+            //setLabelMaterial("Modelo CAD")
             
-        }
-        else {
-            setMaterial("/definit.glb");
-            setLabelMaterial("Fibra de Carbono")
-        }
-        console.log(counter);
-      }
+        //}
+       // else {
+          //  setMaterial("/definit.glb");
+           // setLabelMaterial("Fibra de Carbono")
+       // }
+        //console.log(counter);
+     // }
       const [esMovil, setEsMovil] = useState(false);
 
       useEffect(() => {
@@ -56,12 +56,12 @@ const Desarrollo = () => {
 
             <header className="header-desarrollo">
             
-            <h3>HUITZILLIN V1</h3>
+            <h3 >HUITZILLIN V1</h3>
             
             <p>
               El Futuro de los No-Tipulados
             </p>
-            <button className="ar-button-secondary" onClick={handleChangeMaterial}>{labelMaterial}</button>
+            {/*<button className="ar-button-secondary" onClick={handleChangeMaterial}>{labelMaterial}</button>*/}
             {esMovil && (
   <button onClick={handleAR} className="ar-button-primary">
     Conoce Huitzillin en AR
@@ -70,7 +70,7 @@ const Desarrollo = () => {
             <div className="ar-container">
       <model-viewer
         id="modelo"
-        src={material}
+        src="final_design.glb"
         ar
         ar-modes="scene-viewer webxr quick-look"
         auto-rotate
@@ -79,7 +79,7 @@ const Desarrollo = () => {
         shadow-intensity="1"
         ar-scale="auto"
         exposure="1.2"
-        camera-orbit="60deg 70deg auto"
+        camera-orbit={!esMovil ? "90deg 0deg 0m" : "90deg 0deg auto"}
         class="model-viewer"
       ></model-viewer>
       
