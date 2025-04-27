@@ -48,16 +48,3 @@ button:hover{
   color: black;
   transition: 0.4s;
 }
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #000000;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: black;
-  }
-  button {
-    background-color: transparent;
-  }
-}
