@@ -50,7 +50,10 @@ button:hover{
 }
 
 @media (prefers-color-scheme: light) {
-  
+  :root {
+    color: #ffffff;
+    background-color: transparent;
+  }
   a:hover {
     color: rgb(255, 255, 255);
   }
