@@ -59,7 +59,7 @@ const Desarrollo = () => {
             <h3 >HUITZILLIN V1</h3>
             
             <p>
-              El Futuro de los No-Tipulados
+              El Futuro de los No-Tripulados
             </p>
             {/*<button className="ar-button-secondary" onClick={handleChangeMaterial}>{labelMaterial}</button>*/}
             {esMovil && (
