@@ -3,13 +3,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 4rem;
 }
 .info-nosotros{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 90%;
+  max-width: 80%;
   gap: 2rem;
 }
 .header-nosotros .info-nosotros img{
@@ -19,6 +20,9 @@
 }
 .header-nosotros h3{
   font-size: 2.5rem;
+  margin-top: 12rem;
+  margin-bottom: 0;
+
 }
 .info-nosotros p{
   text-align: justify;
@@ -28,7 +32,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
   background-repeat: no-repeat;
   background-size: cover; /* o contain, según lo que necesites */
   background-position: center;
@@ -37,15 +40,36 @@
   background-repeat: no-repeat;
   overflow-x: hidden;
   overflow-y: hidden;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+
 }
 
   .areas {
     grid-template-columns: 1fr; /* 1 columna en móvil */
     gap: 1.5rem;
   }
+.info-nosotros img{
+  max-width: 100%;
+}
 
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 250px;
+  background: #ffffff;
+  padding: 1rem;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  text-align: center;
+}
 
-@media (min-width: 769px) {
+.card p{
+  margin: 1rem;
+}
+
+@media (min-width: 1350px) {
 
 .areas-nosotros{
     display: flex;

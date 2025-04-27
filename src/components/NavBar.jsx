@@ -5,11 +5,11 @@ import Logo from "../assets/huitzillin_logo 1.svg";
 const NavBar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [animClass, setAnimClass] = useState("");
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 1200);
 
     // Detecta si el tamaño de pantalla cambia (mobile/desktop)
     useEffect(() => {
-        const handleResize = () => setIsMobile(window.innerWidth < 768);
+        const handleResize = () => setIsMobile(window.innerWidth < 1200);
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);

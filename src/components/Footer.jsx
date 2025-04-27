@@ -20,7 +20,7 @@ function Footer() {
             <a href="/privacy">Política de privacidad</a>
         </div>*/}
         <div className="footer-credits">
-            <p>Desarrollado con ❤️ por Huitzillin Team
+            <p>Desarrollado con ❤️ por Huitzillin
             <img src="/huitzillin_logo 1.svg" alt="Logo" />
             </p>
         </div>
