@@ -26,6 +26,7 @@
 }
 .info-nosotros p{
   text-align: justify;
+  font-size: 1.2rem;
 }
 .areas-nosotros{
   display: flex;
@@ -68,66 +69,14 @@
 .card p{
   margin: 1rem;
 }
-
-@media (min-width: 1350px) {
-
-.areas-nosotros{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover; /* o contain, según lo que necesites */
-    background-position: center;
-    background-color: #000000;
-    background-image: url("../assets/back_green.png");
-    background-repeat: no-repeat;
-    overflow-x: hidden;
-    overflow-y: hidden;
-}
-
-.areas-nosotros img{
-  max-width: 600px;
-}
-.info-nosotros{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 4rem;
-    width: 80%;
-}
-.header-nosotros{
-    display: flex;
-    height: 100vh;
-}
-.header-nosotros h3{
-    width: 80%;
-    font-size: 2rem;
-    color: white;
-    text-align: left;
-    font-weight: 800;
-    margin-bottom: 1rem;
-    
-}
-
-.info-nosotros img{
-    transform: rotate(0deg);
-    width: 700px;
-    height: auto;
-}
-
-.info-nosotros p{
-    text-align: justify;
-    max-width: 600px;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: 600;
-}
-
-
+@media (min-width: 768px) and (max-width: 1799px) {
+  .info-nosotros p{
+    font-size: 1.5rem;
+  }
+  .header-nosotros {
+    padding-top: 6rem;
+  }
+  
   
   .card:hover {
     transform: translateY(-5px);
@@ -136,7 +85,7 @@
   
   .card p {
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: black;
   }
   
@@ -167,11 +116,11 @@
   }
   
   .areas-nosotros h3{
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: white;
     text-align: center;
     font-weight: 800;
-    margin-bottom: 1rem;
+    margin-bottom: 5rem;
     margin-top: 0;
   }
 
@@ -182,5 +131,120 @@
     justify-content: center;
     height: 100vh;
   }
+}
+
+@media (min-width: 1800px) {
+
+.areas-nosotros{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover; /* o contain, según lo que necesites */
+    background-position: center;
+    background-color: #000000;
+    background-image: url("../assets/back_green.png");
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.areas-nosotros img{
+  max-width: 1000px;
+}
+.info-nosotros{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    width: 80%;
+}
+.header-nosotros{
+    display: flex;
+    height: 100vh;
+}
+.header-nosotros h3{
+    width: 80%;
+    font-size: 2rem;
+    color: white;
+    text-align: left;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    
+}
+
+.info-nosotros img{
+    transform: rotate(0deg);
+    width: 900px;
+    height: auto;
+}
+
+.info-nosotros p{
+    text-align: justify;
+    max-width: 600px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+  
+.card:hover {
+  transform: translateY(-5px);
+  transition: 0.5s }
+
+
+.card p {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: black;
+}
+
+.areas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas para escritorio */
+  gap: 2rem; /* espacio entre tarjetas */
+  padding: 0 2rem;
+}
+
+/* Estilos para cada tarjeta */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.areas-nosotros h3{
+  font-size: 2.5rem;
+  color: white;
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 5rem;
+  margin-top: 0;
+}
+
+.section-nosotros{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
 
 }

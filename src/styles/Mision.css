@@ -1,30 +1,94 @@
+
+
 .header-vision,
-.header-mision{
-    font-family: "Oswald", sans-serif;
+.header-mision {
+  font-family: "Oswald", sans-serif;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: left;
-    max-width: 80%;
-    height: 100vh;
-    padding: 0 10%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  height: auto;
+  background-size: cover;
+  text-align: justify;
+  overflow: hidden;
+  padding: 3rem 0;
+  height: 100vh;
+    padding: 0;
     background-repeat: no-repeat;
     background-size: cover; /* o contain, según lo que necesites */
     background-position: center;
     background-color: black;
     background-image: url("../assets/grad_azul.svg");
     background-repeat: no-repeat;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    position: relative;
 }
+
+.header-vision img,
+.header-mision img {
+  position: static;
+  max-width: 80%;
+  height: auto;
+  margin: 1.5rem 0;
+}
+
+.info-mision {
+  max-width: 75%;
+  padding: 0;
+  text-align: justify;
+  margin-top: 5rem;
+  z-index: 10;
+}
+
+.info-mision h3 {
+  font-size: 2rem;
+}
+
+.info-mision p {
+  font-size: 1.1rem;
+}
+@media (min-width: 769px) and (max-width: 1549px) {
+  .header-vision,
+  .header-mision{
+
+      flex-direction: column;
+      justify-content: left;
+      position: relative;
+      padding: 0rem;
+  }
+  .info-mision p{
+    font-size: 1.5rem;
+  }
+  .header-vision img {
+  position: absolute;
+  max-width: 80%;
+  bottom: 0%;
+  height: auto;
+  margin: 5.5rem 0;
+}
+
+
+
+}
+
+
+@media (min-width: 1550px) {
+  .header-vision,
+  .header-mision{
+
+      flex-direction: row;
+      justify-content: left;
+      position: relative;
+      padding: 0 10rem;
+  }
+   
+
 
 .header-vision img,
 .header-mision img{
     position: absolute;
     max-width: 1000px;
-    top: -70px;
-    right: -100px;
+    top: 70px;
+    right: 300px;
 }
 .header-vision img{
     max-width: 600px;
@@ -41,7 +105,7 @@
     display: flex;
     flex-direction: column;
     text-align: justify;
-    width: 50%;
+    max-width: 800px;
   
 }
 
@@ -54,52 +118,10 @@
     margin-top: 0;
 }
 
-
-
-
 .info-mision p{
     font-size: 1.5rem;
     color: white;
     font-weight: 500;
 }
-
-@media (max-width: 768px) {
-
-    .header-vision,
-    .header-mision {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-width: 600px;
-      height: auto;
-      background-size: cover;
-      text-align: justify;
-      overflow: hidden;
-      padding: 3rem 0;
-      margin-left: -5rem;
-    }
-  
-    .header-vision img,
-    .header-mision img {
-      position: static;
-      max-width: 80%;
-      height: auto;
-      margin: 1.5rem 0;
-    }
-  
-    .info-mision {
-      max-width: 800px;
-      padding: 0;
-      text-align: justify;
-
-    }
-  
-    .info-mision h3 {
-      font-size: 2rem;
-    }
-  
-    .info-mision p {
-      font-size: 1.1rem;
-    }
   }
   
