@@ -1,0 +1,124 @@
+.header-identidad{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover; /* o contain, según lo que necesites */
+    background-position: center;
+    background-color: #000000;
+    background-image: url("../assets/back_green.png");
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    background-image: url("../assets/prueba.svg");
+}
+
+.header-identidad img{
+    transform: rotate(0deg);
+    max-height: 70vh;
+}
+  .color-section {
+    min-height: 100vh;
+    max-width: 100vw;
+    position: relative;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+
+  .color-section h3 {
+    color: white;
+    font-size: 1.2rem;
+    max-width: 80%;
+    text-align: justify;
+  }
+  .colors-grid{
+    display: grid;
+        
+    grid-template-columns: repeat(2, 1fr);
+}
+.color-button {
+    width: 80%;
+    aspect-ratio: 1 / 0.85;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    background-color: transparent;
+    transition: transform 0.2s ease;
+  }
+
+@media (min-width: 800px) and (max-width: 1199px) {
+    .colors-grid{
+        
+        top: 3rem;
+        left: 4rem;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .color-section h3{
+        top: inherit;
+
+        font-size: 1.5rem;
+    max-width: 700px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .color-section{
+        flex-direction: row;
+        justify-content: left;
+        padding: 2rem 4rem;
+        gap: 30%;
+    }
+  .color-section h3{
+    max-width: 700px;
+    font-size: 1.5rem;
+    justify-content: left;
+
+  }
+
+  .colors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 16px;
+    padding: 16px;
+    text-align: left;
+  }
+
+  .color-item {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  .color-item p{
+    margin-bottom: 7px;
+  }
+
+  .color-button {
+    width: 100%;
+    aspect-ratio: 1 / 0.85;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    background-color: transparent;
+    transition: transform 0.2s ease;
+  }
+
+  .button-active,
+  .color-button:hover {
+    transform: scale(1.1);
+  }
+
+  .color-section h2{
+    position: absolute;
+    top: 0rem;
+    left: 5rem;
+  }
+}
